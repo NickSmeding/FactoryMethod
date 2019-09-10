@@ -21,10 +21,10 @@ namespace phoneStore_Factory_Method
             switch (phoneName.ToLower())
             {
                 case "samsung":
-                    factory = new SamsungFactory(400, 300, new ArrayList() { "camera", "fingerprint" });
+                    factory = new SamsungFactory(2, 7, new ArrayList() { "camera", "fingerprint" });
                     break;
                 case "apple":
-                    factory = new AppleFactory(400, 300, new ArrayList() { "camera" });
+                    factory = new AppleFactory(3, 7, new ArrayList() { "camera" });
                     break;
                 case "...":
 
@@ -36,6 +36,7 @@ namespace phoneStore_Factory_Method
             {
                 Phone phone = factory.GetPhone();
                 phone.GetSpecs();
+                phone.GetInches();
             }
             else
             {

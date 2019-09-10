@@ -9,11 +9,11 @@ namespace phoneStore_Factory_Method
     {
         private readonly string _phoneType;
         private readonly string _OS;
-        private int _width;  
-        private int _height;
+        private double _width;  
+        private double _height;
         private ArrayList _additions;
 
-        public SamsungPhone(int width, int height, ArrayList additions)
+        public SamsungPhone(double width, double height, ArrayList additions)
         {
             _phoneType = "Samsung";
             _OS = "Android";
@@ -38,13 +38,13 @@ namespace phoneStore_Factory_Method
             set { _additions = value; }
         }
 
-        public override int Width
+        public override double Width
         {
             get { return _width; }
             set { _width = value; }
         }
 
-        public override int Height
+        public override double Height
         {
             get { return _height; }
             set { _height = value; }

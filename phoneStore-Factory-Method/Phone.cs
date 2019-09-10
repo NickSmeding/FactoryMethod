@@ -9,8 +9,8 @@ namespace phoneStore_Factory_Method
     {
         public abstract string PhoneType { get; }   
         public abstract string OS { get; }
-        public abstract int Width { get; set; }
-        public abstract int Height { get; set; }
+        public abstract double Width { get; set; }
+        public abstract double Height { get; set; }
         public abstract ArrayList Additions { get; set; }
 
         public void GetSpecs()
@@ -31,6 +31,11 @@ namespace phoneStore_Factory_Method
             }
 
             Console.WriteLine("Additions: " + additions);
+        }
+
+        public virtual void GetInches()
+        {
+            Console.WriteLine("Screen: " + Math.Round(Math.Sqrt((Width * Width) + (Height * Height)), 2) + " inches");
         }
     }
 }

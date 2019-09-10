@@ -7,11 +7,11 @@ namespace phoneStore_Factory_Method
 {
     class AppleFactory : PhoneFactory
     {
-        private int _width;
-        private int _height;
+        private double _width;
+        private double _height;
         private ArrayList _additions;
 
-        public AppleFactory(int width, int height, ArrayList additions)
+        public AppleFactory(double width, double height, ArrayList additions)
         {
             _width = width;
             _height = height;
