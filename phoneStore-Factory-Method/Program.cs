@@ -13,12 +13,12 @@ namespace phoneStore_Factory_Method
 
         public static void GetPhoneInfo()
         {
-            PhoneFactory factory = null;
+            DeviceFactory factory = null;
 
-            Console.Write("Enter the phone type you would like to visit: ");
-            string phoneName = Console.ReadLine();
+            Console.Write("Enter the brand you would like to visit: ");
+            string brand = Console.ReadLine();
 
-            switch (phoneName.ToLower())
+            switch (brand.ToLower())
             {
                 case "samsung":
                     factory = new SamsungFactory(2, 7, new ArrayList() { "camera", "fingerprint" });
@@ -34,9 +34,26 @@ namespace phoneStore_Factory_Method
 
             if (factory != null)
             {
-                Phone phone = factory.GetPhone();
-                phone.GetSpecs();
-                phone.GetInches();
+                Console.Write("Enter the type you would like to see: ");
+                string device = Console.ReadLine();
+
+                switch (device.ToLower())
+                {
+                    case "phone":
+                        Device phone = factory.CreatePhone();
+                        phone.GetSpecs();
+                        phone.GetInches();
+                        break;
+                    case "tablet":
+                        Device tablet = factory.CreateTablet();
+                        tablet.GetSpecs();
+                        tablet.GetInches();
+                        break;
+                    case "...":
+
+                    default:
+                        break;
+                }
             }
             else
             {

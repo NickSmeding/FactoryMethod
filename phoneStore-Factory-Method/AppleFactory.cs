@@ -5,7 +5,7 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class AppleFactory : PhoneFactory
+    class AppleFactory : DeviceFactory
     {
         private double _width;
         private double _height;
@@ -18,9 +18,14 @@ namespace phoneStore_Factory_Method
             _additions = additions;
         }
 
-        public override Phone GetPhone()
+        public override Device CreatePhone()
         {
             return new ApplePhone(_width, _height, _additions);
+        }
+
+        public override Device CreateTablet()
+        {
+            return new AppleTablet(_width, _height, _additions);
         }
     }
 }

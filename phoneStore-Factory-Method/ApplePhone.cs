@@ -5,7 +5,7 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class ApplePhone : Phone
+    class ApplePhone : Device
     {
         private readonly string _phoneType;
         private readonly string _OS;
