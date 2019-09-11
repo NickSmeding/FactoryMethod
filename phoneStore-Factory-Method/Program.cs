@@ -52,12 +52,14 @@ namespace phoneStore_Factory_Method
                     case "...":
 
                     default:
+                        Console.WriteLine("this device doesn't exsist, Try again!");
+                        GetPhoneInfo();
                         break;
                 }
             }
             else
             {
-                Console.WriteLine("this phone doesn't exsist, Try again!");
+                Console.WriteLine("this factory doesn't exsist, Try again!");
                 GetPhoneInfo();
             }
         }
