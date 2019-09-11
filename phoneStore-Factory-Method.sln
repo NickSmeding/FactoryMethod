@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.329
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "phoneStore-Factory-Method", "phoneStore-Factory-Method\phoneStore-Factory-Method.csproj", "{F6936E4D-AA56-46EA-902E-607C4CAAA3E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FactoryMethodTest", "FactoryMethodTest\FactoryMethodTest.csproj", "{EE10288C-4D5E-44BD-842A-E459E04DC3E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F6936E4D-AA56-46EA-902E-607C4CAAA3E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6936E4D-AA56-46EA-902E-607C4CAAA3E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6936E4D-AA56-46EA-902E-607C4CAAA3E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE10288C-4D5E-44BD-842A-E459E04DC3E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE10288C-4D5E-44BD-842A-E459E04DC3E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE10288C-4D5E-44BD-842A-E459E04DC3E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE10288C-4D5E-44BD-842A-E459E04DC3E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
