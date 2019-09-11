@@ -5,7 +5,7 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class ApplePhone : Device
+    public class ApplePhone : Device
     {
         private readonly string _phoneType;
         private readonly string _OS;
@@ -13,9 +13,9 @@ namespace phoneStore_Factory_Method
         private double _height;
         private ArrayList _additions;
 
-        public ApplePhone(double width, double height, ArrayList additions)
+        public ApplePhone(double width, double height, ArrayList additions, String name)
         {
-            _phoneType = "Apple";
+            _phoneType = name;
             _OS = "IOS";
             _width = width;
             _height = height;

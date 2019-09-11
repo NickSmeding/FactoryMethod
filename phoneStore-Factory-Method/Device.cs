@@ -5,7 +5,7 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    abstract class Device
+    public abstract class Device
     {
         public abstract string PhoneType { get; }   
         public abstract string OS { get; }

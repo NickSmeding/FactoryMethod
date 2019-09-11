@@ -5,7 +5,7 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class SamsungTablet : Device
+    public class SamsungTablet : Device
     {
         private readonly string _phoneType;
         private readonly string _OS;
@@ -13,10 +13,10 @@ namespace phoneStore_Factory_Method
         private double _height;
         private ArrayList _additions;
 
-        public SamsungTablet(double width, double height, ArrayList additions)
+        public SamsungTablet(double width, double height, ArrayList additions, String name)
         {
-            _phoneType = "Samsung";
-            _OS = "Android 2.0";
+            _phoneType = name;
+            _OS = "Android";
             _additions = additions;
             _width = width;
             _height = height;

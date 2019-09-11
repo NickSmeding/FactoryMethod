@@ -5,27 +5,23 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class AppleFactory : DeviceFactory
+    public class AppleFactory : DeviceFactory
     {
-        private double _width;
-        private double _height;
-        private ArrayList _additions;
+        private string _name;
 
-        public AppleFactory(double width, double height, ArrayList additions)
+        public AppleFactory(String name)
         {
-            _width = width;
-            _height = height;
-            _additions = additions;
+            _name = name;
         }
 
-        public override Device CreatePhone()
+        public override Device CreatePhone(double width, double height, ArrayList additions)
         {
-            return new ApplePhone(_width, _height, _additions);
+            return new ApplePhone(width, height, additions, _name);
         }
 
-        public override Device CreateTablet()
+        public override Device CreateTablet(double width, double height, ArrayList additions)
         {
-            return new AppleTablet(_width, _height, _additions);
+            return new AppleTablet(width, height, additions, _name);
         }
     }
 }

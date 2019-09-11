@@ -5,27 +5,23 @@ using System.Text;
 
 namespace phoneStore_Factory_Method
 {
-    class SamsungFactory : DeviceFactory
+    public class SamsungFactory : DeviceFactory
     {
-        private double _width;
-        private double _height;
-        private ArrayList _additions;
+        private string _name;
 
-        public SamsungFactory(double width, double height, ArrayList additions)
+        public SamsungFactory(String name)
         {
-            _width = width;
-            _height = height;
-            _additions = additions;
+            _name = name;
         }
 
-        public override Device CreatePhone()
+        public override Device CreatePhone(double width, double height, ArrayList additions)
         {
-            return new SamsungPhone(_width, _height, _additions);
+            return new SamsungPhone(width, height, additions, _name);
         }
 
-        public override Device CreateTablet()
+        public override Device CreateTablet(double width, double height, ArrayList additions)
         {
-            return new SamsungTablet(_width, _height, _additions);
+            return new SamsungTablet(width, height, additions, _name);
         }
     }
 }

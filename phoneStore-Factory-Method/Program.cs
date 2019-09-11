@@ -3,7 +3,7 @@ using System.Collections;
 
 namespace phoneStore_Factory_Method
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
@@ -21,10 +21,10 @@ namespace phoneStore_Factory_Method
             switch (brand.ToLower())
             {
                 case "samsung":
-                    factory = new SamsungFactory(2, 7, new ArrayList() { "camera", "fingerprint" });
+                    factory = new SamsungFactory("Samsung");
                     break;
                 case "apple":
-                    factory = new AppleFactory(3, 7, new ArrayList() { "camera" });
+                    factory = new AppleFactory("Apple");
                     break;
                 case "...":
 
@@ -40,12 +40,12 @@ namespace phoneStore_Factory_Method
                 switch (device.ToLower())
                 {
                     case "phone":
-                        Device phone = factory.CreatePhone();
+                        Device phone = factory.CreatePhone(2, 7, new ArrayList() { "camera", "fingerprint" });
                         phone.GetSpecs();
                         phone.GetInches();
                         break;
                     case "tablet":
-                        Device tablet = factory.CreateTablet();
+                        Device tablet = factory.CreateTablet(14, 6, new ArrayList() { "camera", "fingerprint" });
                         tablet.GetSpecs();
                         tablet.GetInches();
                         break;
